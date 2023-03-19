@@ -82,8 +82,8 @@ function onHttpStart() {
 }
 
 // setup a 'route' to listen on the default url path (http://localhost)
-app.get("/",(req,res)=> {
-    res.redirect('/blog');
+app.get('/',(req,res)=> {
+    res.redirect("/blog");
 });
 
 // setup another route to listen on /about

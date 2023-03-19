@@ -246,7 +246,7 @@ app.get('/posts', (req, res) => {
   } else {
     // no filter
     try{
-    const posts = getPosts();
+    const posts = getAllPosts();
     res.render("posts", { posts });
     }catch(err){
       res.render("posts", { message: err });

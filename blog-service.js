@@ -61,6 +61,15 @@ getPublishedPosts = () => {
     })
 };
 
+
+// getPublishedPostsByCategories(Assignment4)
+module.exports.getPublishedPostsByCategory = function(category){
+    return new Promise((resolve,reject)=>{
+        let filteredPosts = posts.filter(post => post.published && post.category == category);
+        (filteredPosts.length > 0) ? resolve(filteredPosts) : reject("no results returned");
+    });
+}
+
 // for the categories
 getCategories = () => {
     return new Promise((resolve, reject) => {
@@ -84,6 +93,12 @@ addPost = (postData)  => {
         postData.published = true;
     }
       postData.id = posts.length + 1;
+      postData.published = boolean(postData.published);
+      const date = new Date();
+      let day = date.getDate();
+      let month = date.getMonth()+1;
+      let year = date.getFullYear();
+      postData.postDate = `${year}-${month}-${day}`;
       posts.push(postData);
     return new Promise((resolve, reject) => {
         if(postData.length == 0){

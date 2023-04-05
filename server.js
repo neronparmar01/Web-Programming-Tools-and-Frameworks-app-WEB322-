@@ -6,9 +6,9 @@
 *
 * Name: _____Neron Nelson Parmar_____ Student ID: __171690217__ Date: __4/4/23__
 *
-* Cyclic Web App URL: _____________https://lemon-walkingstick-sari.cyclic.app/____________
+* Cyclic Web App URL: _____________https://embarrassed-garment-dove.cyclic.app/____________
 *
-* GitHub Repository URL: __________https://github.com/neronparmar01/web322-app__________
+* GitHub Repository URL: __________https://github.com/neronparmar01/web322-app.git__________
 *
 ********************************************************************************/
 const multer = require("multer");
